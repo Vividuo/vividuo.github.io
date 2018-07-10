@@ -1,1 +1,26 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+  </head>
+  <body>
+    <div id="app"></div>
+    <img src="/static/home-active@3x.png" />
+    <!-- built files will be auto injected -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/static/sw.js').then(registration => {
+            console.log('serviceWorker register success', registration.scope)
+        }).catch(error => {
+            console.log('serviceWorker register failed', error)
+        })
+    }
+    </script>
+  </body>
+</html>
